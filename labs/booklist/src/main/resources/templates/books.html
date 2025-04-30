@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div th:each="book : ${books}" th:class="${book.isInStock()} ? 'available' : 'unavailable'">
+    <h2 th:text="'Title: ' + ${book.getTitle()}"></h2>
+    <h3 th:text="'Author: ' + ${book.getAuthor()}"></h3>
+    <h3 th:text="'Year: ' + ${book.getYear()}"></h3>
+    <h3 th:text="'Genre: ' + ${book.getGenre()}"></h3>
+    <h3 th:text="'Price: ' + ${book.getPrice()} + '$'"></h3>
+    <h3 th:text="${book.isInStock()} ? 'The book is available' : 'The book is not available'"></h3>
+</div>
+</body>
+</html>
