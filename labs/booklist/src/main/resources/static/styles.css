@@ -1,0 +1,14 @@
+.book {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.in-stock {
+    background-color: green;
+}
+
+.out-of-stock {
+    background-color: red;
+}
