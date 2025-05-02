@@ -1,0 +1,68 @@
+/* Main styles for the book list */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Conditional formatting for book stock status */
+.book-in-stock {
+    background-color: #e6ffe6; /* Light green background */
+    border-left: 5px solid #4CAF50; /* Green left border */
+}
+
+.book-out-of-stock {
+    background-color: #ffebeb; /* Light red background */
+    border-left: 5px solid #f44336; /* Red left border */
+}
+
+.book-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.book-author {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.book-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.stock-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.in-stock {
+    color: #4CAF50;
+}
+
+.out-of-stock {
+    color: #f44336;
+}
