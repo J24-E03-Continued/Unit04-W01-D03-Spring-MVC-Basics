@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<h1>Book Page</h1>
+
+<p th:text="'Title ' + ${book.title}"></p>
+
+
+<div th:if="${book.inStock}">
+    <h3>Is Available</h3>
+</div>
+
+<div th:unless="${book.inStock}">
+    <h3>See our available Books</h3>
+    <button>See Here</button>
+</div>
+
+
+<h4 th:class="${book.inStock}  ? 'success' : 'error'">Message</h4>
+
+
+</body>
+</html>
